@@ -1,5 +1,7 @@
 ---
 import '../../src/styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
 const pageTitle = 'Sobre mi(au)';
 const identity = {
@@ -10,8 +12,8 @@ const identity = {
 const habilities = ['Dormir', 'Comer', 'Ronronear', 'Cazar', 'Saltar'];
 
 const happy = true;
-const finished = false;
-const goal = 3;
+const finished = true;
+const goal = 20;
 
 const skillColor = 'navy';
 const fontWeight = 'bold';
@@ -38,14 +40,12 @@ const textCase = 'uppercase';
         </style>
     </head>
     <body>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">Blog</a>
+        <Header />
         <h1>{pageTitle}</h1>
         <h2>Yo, {identity.name}... y a veces spiderman</h2>
         <p>
             Hola, soy un {identity.role}. Mi vida comenzó en un precioso país llamado {identity.location}. Unos amables humanos me acogieron entre ellos y me llamaron "Peter Pan" (horrible, pero
-            bueno), ahora mi nombre ha cambiado gracias a diós.
+            bueno), ahora mi nombre ha cambiado gracias a Dios.
         </p>
         <p>
             Crecí en una enoooorme casa llena de amor y calor. Jugaba con los niños todos los días y me acurrucaba con ellos todas las noches. A medida que crecía, también crecía mi curiosidad. Empecé
@@ -67,5 +67,6 @@ const textCase = 'uppercase';
         <p>
             {finished ? 'Esta es mi historia. Soy un gato, y esta es la vida que he vivido (hasta hoy).' : 'Continuará'}
         </p>
+        <Footer />
     </body>
 </html>

@@ -1,0 +1,35 @@
+---
+import Social from './Social.astro'
+const platforms = [
+    { name: 'GitHub', title:'Sígueme en GitHub', url: 'https://github.com/RobertoGDev' },
+    { name: 'Instagram', title:'Sígueme en Instagram', url: 'https://instagram.com/dashed_to_darkness' },
+    { name: 'Twitter', title:'Sígueme en Twitter', url: 'https://twitter.com/truestylegraff' },
+    { name: 'LinkedIn', title:'Sígueme en LinkedIn', url: 'https://www.linkedin.com/in/RobertoGDev'}
+]
+---
+<style>
+  footer .social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .copyright {
+    margin-top: 2rem;
+    text-align: center;
+  }
+</style>
+
+<footer>
+    <div class="social">
+    {platforms && platforms.map((platform, index) => {
+        return <>
+            <Social title={platform.title} name={platform.name} url={platform.url}/>
+        </>
+    })}
+    </div>
+    <div class="copyright">
+        <small>RobertoGDev {new Date().getFullYear()}</small>
+    </div>
+</footer>
