@@ -1,0 +1,14 @@
+---
+const { name, url, title } = Astro.props;
+---
+</>
+    <a target="_blank" title={title} href={url}>{name}</a>{' '}
+</>
+<style>
+  a {
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: #4c1d95;
+    text-decoration: none;
+  }
+</style>
