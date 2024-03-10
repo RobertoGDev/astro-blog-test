@@ -1,5 +1,21 @@
 ---
+import '../../src/styles/global.css';
 
+const pageTitle = 'Sobre mi(au)';
+const identity = {
+    name: 'Gustosín',
+    role: 'Gato',
+    location: 'Polonia'
+};
+const habilities = ['Dormir', 'Comer', 'Ronronear', 'Cazar', 'Saltar'];
+
+const happy = true;
+const finished = false;
+const goal = 3;
+
+const skillColor = 'navy';
+const fontWeight = 'bold';
+const textCase = 'uppercase';
 ---
 
 <html lang="en">
@@ -7,27 +23,49 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
-        <title>About</title>
+        <title>{pageTitle}</title>
+        <style define:vars={{skillColor, fontWeight, textCase}}>
+            h1 {
+                color: purple;
+                font-size: 4rem;
+            }
+            .skill {
+                color: var(--skillColor);
+                font-weight: var(--fontWeight);
+                text-transform: var(--textCase);
+                font-weight: bold;
+            }
+        </style>
     </head>
     <body>
         <a href="/">Home</a>
         <a href="/about/">About</a>
         <a href="/blog/">Blog</a>
-        <h1>Yo Gustosín</h1>
-        <h2>... y a veces spiderman</h2>
-        <p>Hola, soy un gato. Mi vida comenzó en una pequeña caja de cartón en un callejón. Fui encontrado por una niña que me llevó a su casa. Ella me llamó "Whiskers".</p>
+        <h1>{pageTitle}</h1>
+        <h2>Yo, {identity.name}... y a veces spiderman</h2>
         <p>
-            Crecí en una casa llena de amor y calor. Jugaba con la niña todos los días y me acurrucaba con ella todas las noches. A medida que crecía, también crecía mi curiosidad. Empecé a explorar
-            la casa y a veces incluso me aventuraba fuera.
+            Hola, soy un {identity.role}. Mi vida comenzó en un precioso país llamado {identity.location}. Unos amables humanos me acogieron entre ellos y me llamaron "Peter Pan" (horrible, pero
+            bueno), ahora mi nombre ha cambiado gracias a diós.
         </p>
         <p>
-            A lo largo de los años, he tenido muchas aventuras. He cazado ratones, he trepado árboles y he dormido en los lugares más cómodos. Aunque he tenido mis momentos de miedo y ansiedad,
-            siempre he sabido que tengo un hogar donde soy amado.
+            Crecí en una enoooorme casa llena de amor y calor. Jugaba con los niños todos los días y me acurrucaba con ellos todas las noches. A medida que crecía, también crecía mi curiosidad. Empecé
+            a explorar la casa y a veces incluso me aventuraba fuera con mi hermano aunque no me dió muy buena espina el exterior.
         </p>
         <p>
-            Ahora, soy un gato viejo y sabio. Paso la mayor parte de mi tiempo durmiendo y observando el mundo desde mi ventana favorita. Aunque no soy tan activo como antes, todavía disfruto de la
-            compañía de mi familia humana.
+            A lo largo de un año y poco, he tenido muchas aventuras. He cazado ratones, he trepado palmeras y he dormido en los lugares más cómodos, nunca me faltó de nada, fuí un gatito muy
+            afortunado y aunque he tenido mis momentos de miedo y ansiedad, siempre he sabido que tengo un hogar donde soy amado.
         </p>
-        <p>Esta es mi historia. Soy un gato, y esta es la vida que he vivido.</p>
+        <p>Mis habilidades son: {habilities.map((hability) => <span class="skill">{hability} </span>)}</p>
+        <p>
+            {happy ? 'Soy un gato muy feliz' : 'No soy un gato muy feliz'}
+        </p>
+        <p>
+            Aunque de la noche a la mañana, mis humanos tuvieron que marcharse a su país y hoy vivo en una habitación (comparado con mi anterior hogar) aunque no me falta de nada, ni amor ni bondad.
+            Paso la mayor parte de mi tiempo durmiendo y maullando a mi humano. {goal > 0 ? `Mi objetivo es maullar un mínimo de ${goal} veces al día` : 'Aunque últimamente no suelo maullar'}. Mi
+            hobby es observar el mundo desde mi ventana favorita y aunque no soy tan activo como antes, poco a poco voy tomando confianza y soltándome más a correr y jugar.
+        </p>
+        <p>
+            {finished ? 'Esta es mi historia. Soy un gato, y esta es la vida que he vivido (hasta hoy).' : 'Continuará'}
+        </p>
     </body>
 </html>

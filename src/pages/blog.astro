@@ -1,5 +1,6 @@
 ---
-
+import '../../src/styles/global.css';
+const pageTitle = 'Blog';
 ---
 
 <html lang="en">
@@ -7,13 +8,13 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
-        <title>Blog</title>
+        <title>{pageTitle}</title>
     </head>
     <body>
         <a href="/">Home</a>
         <a href="/about/">About</a>
         <a href="/blog/">Blog</a>
-        <h1>Blog</h1>
+        <h1>{pageTitle}</h1>
         <p>Aquí publicaré sobre mi vida gatuna.</p>
 \        <ul>
             <li><a href="/posts/post-1/">Publicación 1</a></li>
