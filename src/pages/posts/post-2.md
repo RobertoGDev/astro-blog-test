@@ -2,14 +2,14 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Día 1: Hoy he viajado desde mi antiguo territorio"
 author: 'William McGustosín I'
+pubDate: 2024-01-12
 description: "Un largo viaje y no he hecho caca."
 image:
     url: 'https://lh3.googleusercontent.com/pw/AP1GczP3nG_OFGOSYiBfBhlByGhyre_6vJHuxYy7pOV07LMk1oFBv6FrmFrdiqZGgsP2zgdyYVkPmaYgXOAoSiH25UaT19n_dzhoQF1FB5Rv60IW2tPbAcOz=w2400'
     alt: 'La imagen de Gustosín.'
     ancho: 200
     alto: auto
-pubDate: 2024-01-12
-tags: ["astro", "bloguear", "aprender en público", "éxitos"]
+tags: ["gato", "viaje", "caca", "habitación"]
 ---
 
 Día 1: Hoy he viajado desde mi antiguo territorio, he intentado salir del compartimento donde me suelen encerrar cuando suelo acabar con una aguja clavada en el culo pero, como de costumbre, no ha habido éxito. El viaje se hizo eterno así que me tumbé a ver la carretera y a limitarme a respirar. 

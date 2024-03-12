@@ -2,14 +2,14 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Dia 2: Por fín he hecho caca!!"
 author: 'William McGustosín I'
+pubDate: 2024-01-13
 description: "La nueva habitación es pequeña."
 image:
     url: 'https://lh3.googleusercontent.com/pw/AP1GczOtX_DurT7fhqzvciqSkYDqc31X5Nw9lryvhknI_OUU-j3c9dA_ot0x3hVFvbu-rMr6hpFcceIgATrJTih-1wXnuHnv8KKTSLdZV-kN1QthdMtFD4cp=w2400'
     ancho: 600
     alto: auto
     alt: 'La imagen de Gustosín.'
-pubDate: 2022-07-15
-tags: ["astro", "aprender en público", "contratiempos", "comunidad"]
+tags: ["gato", "caca", "caricias", "ronroneos", "fotos", "amor", "humanos"]
 ---
 
 Dia 2: Por fín he hecho caca!! aunque he tenido que subir a lo alto de un lugar a hacerla. 
