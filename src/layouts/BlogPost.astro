@@ -2,6 +2,9 @@
 const {urlPost, postTitle} = Astro.props
 ---
 
-<div class="post">
-    <p>💌 <a title={`Enlace a ${postTitle}`} href={urlPost}>{postTitle}</a></p>
-</div>
+    <li>💌 <a title={`Enlace a ${postTitle}`} href={urlPost}>{postTitle}</a></li>
+    <style>
+        li {
+            margin-bottom: 10px;
+        } 
+    </style>

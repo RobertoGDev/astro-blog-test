@@ -11,6 +11,9 @@ const { frontmatter } = Astro.props;
             <li>Publicado el: {frontmatter.pubDate.toString().slice(0, 10)}</li>
             <li>Descripción: {frontmatter.description}</li>
         </ul>
+        <div class="tags">
+            {frontmatter.tags.map((tag) => <a class="taglink" href={`/tags/${tag}`} title={tag}>{tag}</a>)}
+        </div>
     </div>
     <div class="content">
         <img width={frontmatter.image.ancho} height={frontmatter.image.alto} src={frontmatter.image.url} alt={frontmatter.image.alt} />
@@ -22,6 +25,11 @@ const { frontmatter } = Astro.props;
         list-style-type: none;
         font-size: 0.7em;
         padding: 10px;
+    }
+
+    .taglink {
+        display: inline-block;
+        margin-right: 20px;
     }
     .content {
         position: relative;
