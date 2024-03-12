@@ -1,26 +1,14 @@
 ---
-import '../../src/styles/global.css';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = 'Blog';
 ---
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>{pageTitle}</title>
-    </head>
-    <body>
-        <Header />
-        <h1>{pageTitle}</h1>
-        <p>Aquí publicaré sobre mi vida gatuna.</p>
-        <ul>
-            <li><a href="/posts/post-1/">Mi primera publicación</a></li>
-            <li><a href="/posts/post-2/">Dia 1: El Viaje</a></li>
-            <li><a href="/posts/post-3/">Dia 2: Por fín he hecho caca!!</a></li>
-        </ul>
-        <Footer />
-    </body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+    <h1>{pageTitle}</h1>
+    <p>Aquí publicaré sobre mi vida gatuna.</p>
+    <ul>
+        <li><a href="/posts/post-1/">Mi primera publicación</a></li>
+        <li><a href="/posts/post-2/">Dia 1: El Viaje</a></li>
+        <li><a href="/posts/post-3/">Dia 2: Por fín he hecho caca!!</a></li>
+    </ul>
+</BaseLayout>
