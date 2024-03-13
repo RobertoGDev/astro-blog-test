@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro"
+const allPosts = await Astro.glob('../posts/*.md');
+const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())]
+const pageTitle = "Índice de tags"
+---
+
+<BaseLayout pageTitle={pageTitle}>
+
+    <h1>{pageTitle}</h1>
+    <ul class="tags">
+        {tags.map((tag) => (
+            <li class="tag"><a href={`/tags/${tag}`} title={`tag ${tag}`}>{tag}</a></li>
+        ))}
+    </ul>
+    <style>
+    a {
+        color: #00539F;
+    }
+
+    .tags {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .tag a {
+        border: dotted 1px #a1a1a1;
+        border-radius: .5em;
+        padding: .5em 1em;
+        font-size: 1.15em;
+        background-color: #F8FCFD;
+        margin: 0.25em;
+        display: flex;
+    }
+    </style>
+</BaseLayout>
