@@ -1,10 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Greetings from "../components/Greeting"
 const pageTitle = 'El Blog de Gustosín';
 ---
 
 <BaseLayout pageTitle={pageTitle}>
         <h1>{pageTitle}</h1>
+        <Greetings client:load messages={['Miau!!', 'Hola human@!', 'Meeeew', 'Mrrrriau!']} />
         <div class="portada">
             <img width="400px" height="auto" src="/gustosin.svg" alt="Gustosín">
         </div>
