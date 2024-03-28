@@ -1,0 +1,42 @@
+---
+
+---
+
+<div id="avaturn-sdk-container"></div>
+
+<style>
+    #avaturn-sdk-container {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+</style>
+
+<script>
+    // Loading directly from CDN, see FAQ about packaging
+    import { AvaturnSDK } from '@avaturn/sdk';
+
+    function loadAvaturn() {
+        const container = document.getElementById('avaturn-sdk-container');
+        // REPLACE THE SUBDOMAIN WITH YOUR OWN
+        const subdomain = 'truestyle';
+        const url = `https://${subdomain}.avaturn.dev`;
+        // You can now use AvaturnSDK
+
+        const sdk = new AvaturnSDK();
+        sdk.init(container, { url }).then(() => {
+            // Listen for export callback (when a user clicks "Next")
+            sdk.on('export', (data) => {
+                alert('[callback] Avatar exported. See logs to explore the returned data.');
+                // INSERT YOUR CODE TO HANDLE EXPORT HERE!
+                // data of type https://sdk-docs.avaturn.me/types/ExportAvatarResult
+                console.log(data);
+            });
+        });
+    }
+    loadAvaturn();
+
+    // You can also uncomment the following line to make `loadAvaturn` available globally as window.loadAvaturn
+    // This is useful if you want to e.g. load Avaturn on button click
+    // globalThis.loadAvaturn = loadAvaturn;
+</script>
