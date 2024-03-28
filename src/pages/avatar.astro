@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Avaturn from '../components/Avaturn.astro';
+import Greetings from '../components/Greeting';
+const pageTitle = '¡Crea tu propio avatar!';
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <h1>{pageTitle}</h1>
+    <div class="portada">
+        <Avaturn client:load />
+    </div>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        .portada {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 20px;
+            height: 100vh;
+        }
+    </style>
+</BaseLayout>
