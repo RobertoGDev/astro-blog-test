@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: "Día 1: Hoy he viajado desde mi antiguo territorio"
 author: 'William McGustosín I'
 pubDate: 2024-01-12

@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Mi primera gato-publicación'
 pubDate: 2024-07-01
 description: 'Este es la primera publicación de mi nuevo blog. Miau!'

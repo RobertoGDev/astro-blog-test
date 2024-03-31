@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: "Dia 2: Por fín he hecho caca!!"
 author: 'William McGustosín I'
 pubDate: 2024-01-13

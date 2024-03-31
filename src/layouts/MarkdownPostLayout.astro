@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import { fade } from 'astro:transitions';
 const { frontmatter } = Astro.props;
 ---
 
@@ -7,12 +8,18 @@ const { frontmatter } = Astro.props;
     <h1>{frontmatter.title}</h1>
     <div class="data">
         <ul>
-            <li>Escrito por {frontmatter.author}</li>
-            <li>Publicado el: {frontmatter.pubDate.toString().slice(0, 10)}</li>
-            <li>Descripción: {frontmatter.description}</li>
+            <li transition:animate={fade({ duration: '.2s' })}>Escrito por <a href="/about/">{frontmatter.author}</a></li>
+            <li transition:animate={fade({ duration: '.5s' })}>Publicado el: {frontmatter.pubDate.toString().slice(0, 10)}</li>
+            <li transition:animate={fade({ duration: '.9s' })}>Descripción: {frontmatter.description}</li>
         </ul>
         <div class="tags">
-            {frontmatter.tags.map((tag) => <a class="taglink" href={`/tags/${tag}`} title={tag}>{tag}</a>)}
+            {
+                frontmatter.tags.map((tag) => (
+                    <a class="taglink" href={`/tags/${tag}`} title={tag}>
+                        {tag}
+                    </a>
+                ))
+            }
         </div>
     </div>
     <div class="content">
@@ -33,10 +40,10 @@ const { frontmatter } = Astro.props;
 
     .taglink {
         border: dotted 1px #a1a1a1;
-        border-radius: .5em;
-        padding: .5em 1em;
+        border-radius: 0.5em;
+        padding: 0.5em 1em;
         font-size: 1.15em;
-        background-color: #F8FCFD;
+        background-color: #f8fcfd;
         margin: 0.25em;
         display: flex;
     }

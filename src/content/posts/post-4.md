@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: "Dia 4: Visitas para conocerme"
 author: 'William McGustosín I'
 pubDate: 2024-17-23
